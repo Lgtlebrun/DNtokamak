@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dnshape"
+version = "0.1.0"
+description = "Shape double null tokamak equilibria from line currents and export them to GBS"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy>=1.7",
+    "contourpy>=1.0.1",
+    "h5py",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+dev = ["matplotlib>=3.5", "pytest", "ruff"]
+
+[project.scripts]
+dnshape = "dnshape.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: optimiser runs on a coarse grid"]
+
+[tool.ruff]
+line-length = 88
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
