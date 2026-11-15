@@ -3,7 +3,7 @@ from pathlib import Path
 import h5py
 import pytest
 
-from dnshape.cli import build_parser, main
+from dntokamak.cli import build_parser, main
 
 CONFIG = (
     Path(__file__).resolve().parent.parent

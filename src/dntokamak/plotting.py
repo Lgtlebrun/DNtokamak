@@ -7,10 +7,10 @@ from __future__ import annotations
 
 import numpy as np
 
-from dnshape.currents import Currents
-from dnshape.equilibrium import Equilibrium
-from dnshape.grid import Grid
-from dnshape.shape import measure
+from dntokamak.currents import Currents
+from dntokamak.equilibrium import Equilibrium
+from dntokamak.grid import Grid
+from dntokamak.shape import measure
 
 
 def _contour_levels(psi: np.ndarray, currents: Currents, grid: Grid) -> np.ndarray:

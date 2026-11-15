@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from dnshape.grid import Grid
+from dntokamak.grid import Grid
 
 
 def _frozen_array(values) -> np.ndarray:

@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from dnshape import Grid, load_config
+from dntokamak import Grid, load_config
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "configs"
 CONFIG_PATHS = sorted(CONFIG_DIR.glob("*/*.json"))

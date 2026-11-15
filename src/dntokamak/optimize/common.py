@@ -5,8 +5,8 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass
 
-from dnshape.currents import Currents
-from dnshape.shape import Shape
+from dntokamak.currents import Currents
+from dntokamak.shape import Shape
 
 log = logging.getLogger(__name__)
 

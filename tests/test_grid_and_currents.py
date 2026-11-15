@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 
-from dnshape import Currents, Grid, load_config, ring, save_config
-from dnshape.configs import Config
+from dntokamak import Currents, Grid, load_config, ring, save_config
+from dntokamak.configs import Config
 
 
 def test_default_grid_shape(grid):

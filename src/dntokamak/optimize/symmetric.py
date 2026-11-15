@@ -18,11 +18,11 @@ from enum import Enum
 import numpy as np
 from scipy.optimize import fmin, minimize
 
-from dnshape.currents import Currents, ring
-from dnshape.equilibrium import Equilibrium, xpoint_fold
-from dnshape.grid import Grid
-from dnshape.optimize.common import PENALTY, Result, check_bounds
-from dnshape.shape import Shape, symmetric
+from dntokamak.currents import Currents, ring
+from dntokamak.equilibrium import Equilibrium, xpoint_fold
+from dntokamak.grid import Grid
+from dntokamak.optimize.common import PENALTY, Result, check_bounds
+from dntokamak.shape import Shape, symmetric
 
 log = logging.getLogger(__name__)
 

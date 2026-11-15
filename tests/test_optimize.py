@@ -1,10 +1,10 @@
 import numpy as np
 import pytest
 
-from dnshape import Currents
-from dnshape.optimize import symmetric, up_down
-from dnshape.optimize.common import check_bounds
-from dnshape.optimize.symmetric import Goal
+from dntokamak import Currents
+from dntokamak.optimize import symmetric, up_down
+from dntokamak.optimize.common import check_bounds
+from dntokamak.optimize.symmetric import Goal
 
 
 def test_mirror_pairs_of_a_ring_with_eight_shaping_currents():

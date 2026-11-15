@@ -3,7 +3,7 @@ requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dnshape"
+name = "dntokamak"
 version = "0.1.0"
 description = "Shape double null tokamak equilibria from line currents and export them to GBS"
 readme = "README.md"
@@ -20,7 +20,7 @@ plot = ["matplotlib>=3.5"]
 dev = ["matplotlib>=3.5", "pytest", "ruff"]
 
 [project.scripts]
-dnshape = "dnshape.cli:main"
+dntokamak = "dntokamak.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

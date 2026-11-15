@@ -15,11 +15,11 @@ import logging
 import numpy as np
 from scipy.optimize import fmin, minimize
 
-from dnshape.currents import Currents, ring
-from dnshape.equilibrium import Equilibrium, xpoint_lower_half
-from dnshape.grid import Grid
-from dnshape.optimize.common import PENALTY, Result, check_bounds
-from dnshape.shape import Shape, up_down
+from dntokamak.currents import Currents, ring
+from dntokamak.equilibrium import Equilibrium, xpoint_lower_half
+from dntokamak.grid import Grid
+from dntokamak.optimize.common import PENALTY, Result, check_bounds
+from dntokamak.shape import Shape, up_down
 
 log = logging.getLogger(__name__)
 

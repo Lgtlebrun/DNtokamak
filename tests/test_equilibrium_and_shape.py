@@ -4,9 +4,9 @@ from types import SimpleNamespace
 import numpy as np
 import pytest
 
-from dnshape import Equilibrium, flux, measure, ring
-from dnshape.equilibrium import xpoint_fold, xpoint_lower_half
-from dnshape.shape import ShapeError, _drop_stray_branches, up_down
+from dntokamak import Equilibrium, flux, measure, ring
+from dntokamak.equilibrium import xpoint_fold, xpoint_lower_half
+from dntokamak.shape import ShapeError, _drop_stray_branches, up_down
 
 
 def test_flux_is_finite_on_the_main_current(grid, symmetric_config):

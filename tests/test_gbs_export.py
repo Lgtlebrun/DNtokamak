@@ -2,8 +2,8 @@ import h5py
 import numpy as np
 import pytest
 
-from dnshape import Equilibrium
-from dnshape.gbs_export import gbs_datasets, gbs_filename, write_h5
+from dntokamak import Equilibrium
+from dntokamak.gbs_export import gbs_datasets, gbs_filename, write_h5
 
 BASE = {
     "psi_eq", "dpsidx_v", "dpsidy_v", "d2psidx2_v", "d2psidy2_v",

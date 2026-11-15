@@ -56,8 +56,8 @@ Derivatives are finite differences per mesh index, they are not divided by the m
 Python 3.9 or later.
 
 ```bash
-git clone https://github.com/Lgtlebrun/SPC.git
-cd SPC
+git clone https://github.com/Lgtlebrun/dntokamak.git
+cd dntokamak
 pip install -e ".[plot]"
 ```
 
@@ -67,17 +67,17 @@ The core needs numpy, scipy, contourpy and h5py. Matplotlib is only used for plo
 
 ```bash
 # plot a shipped configuration, or the exported fields with --fields
-dnshape plot configs/symmetric/delta_-0.5_kappa_1.7.json --out figure.png
-dnshape plot configs/symmetric/delta_-0.5_kappa_1.7.json --fields --out fields.png
+dntokamak plot configs/symmetric/delta_-0.5_kappa_1.7.json --out figure.png
+dntokamak plot configs/symmetric/delta_-0.5_kappa_1.7.json --fields --out fields.png
 
 # write the GBS file of a shipped configuration
-dnshape export configs/symmetric/delta_-0.5_kappa_1.7.json --out results/gbs
+dntokamak export configs/symmetric/delta_-0.5_kappa_1.7.json --out results/gbs
 
 # fit a new symmetric equilibrium, X point height between 125 and 155
-dnshape symmetric --kappa 1.7 --delta -0.5 -0.4 --xpoint 125 155 --gbs --plot
+dntokamak symmetric --kappa 1.7 --delta -0.5 -0.4 --xpoint 125 155 --gbs --plot
 
 # fit an up/down asymmetric equilibrium from a given start
-dnshape updown --kappa 1.8 --delta-up 0.05 --delta-down 0.03 --xpoint 120 185 \
+dntokamak updown --kappa 1.8 --delta-up 0.05 --delta-down 0.03 --xpoint 120 185 \
     --start configs/up_down/start_kappa_1.8.json
 ```
 
@@ -86,8 +86,8 @@ A symmetric fit takes a minute or two per triangularity on a laptop. Results go 
 The same pieces are available from Python:
 
 ```python
-from dnshape import Equilibrium, Grid, load_config, measure
-from dnshape.optimize import symmetric
+from dntokamak import Equilibrium, Grid, load_config, measure
+from dntokamak.optimize import symmetric
 
 config = load_config("configs/symmetric/delta_-0.5_kappa_1.7.json")
 eq = Equilibrium.for_kind(config.currents, config.grid, config.kind)
@@ -131,7 +131,7 @@ Fields of a JSON file: `kind` (`symmetric` or `up_down`), `grid`, `currents` (`x
 ## Repository layout
 
 ```
-src/dnshape/
+src/dntokamak/
     grid.py            box, mesh, staggered mesh and scales
     currents.py        immutable Currents, ring of shaping currents
     flux.py            flux and finite difference derivatives
@@ -141,7 +141,7 @@ src/dnshape/
     gbs_export.py      HDF5 writer
     configs.py         JSON input and output
     plotting.py        figures (needs matplotlib)
-    cli.py             the dnshape command
+    cli.py             the dntokamak command
 configs/               shipped configurations
 docs/images/           figures of this page
 tests/                 pytest suite

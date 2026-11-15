@@ -7,10 +7,10 @@ from pathlib import Path
 import h5py
 import numpy as np
 
-from dnshape import flux
-from dnshape.currents import Currents
-from dnshape.equilibrium import Equilibrium, xpoint_fold
-from dnshape.grid import Grid
+from dntokamak import flux
+from dntokamak.currents import Currents
+from dntokamak.equilibrium import Equilibrium, xpoint_fold
+from dntokamak.grid import Grid
 
 
 def gbs_filename(delta: float) -> str:

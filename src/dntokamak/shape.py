@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from dnshape.equilibrium import Equilibrium
+from dntokamak.equilibrium import Equilibrium
 
 
 class ShapeError(ValueError):

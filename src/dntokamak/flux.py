@@ -9,8 +9,8 @@ from __future__ import annotations
 import numpy as np
 from scipy.special import expn
 
-from dnshape.currents import Currents
-from dnshape.grid import Grid
+from dntokamak.currents import Currents
+from dntokamak.grid import Grid
 
 
 def psi(

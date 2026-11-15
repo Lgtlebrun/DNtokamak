@@ -1,4 +1,4 @@
-"""Command line interface: dnshape symmetric | updown | export | plot."""
+"""Command line interface: dntokamak symmetric | updown | export | plot."""
 
 from __future__ import annotations
 
@@ -8,15 +8,15 @@ import logging
 import time
 from pathlib import Path
 
-from dnshape.configs import Config, load_config, save_config
-from dnshape.currents import Currents
-from dnshape.equilibrium import Equilibrium
-from dnshape.gbs_export import gbs_filename, write_h5
-from dnshape.grid import Grid
-from dnshape.optimize import symmetric, up_down
-from dnshape.shape import measure
+from dntokamak.configs import Config, load_config, save_config
+from dntokamak.currents import Currents
+from dntokamak.equilibrium import Equilibrium
+from dntokamak.gbs_export import gbs_filename, write_h5
+from dntokamak.grid import Grid
+from dntokamak.optimize import symmetric, up_down
+from dntokamak.shape import measure
 
-log = logging.getLogger("dnshape")
+log = logging.getLogger("dntokamak")
 
 
 def _save_plot(config: Config, path: Path, fields: bool = False) -> None:
@@ -25,7 +25,7 @@ def _save_plot(config: Config, path: Path, fields: bool = False) -> None:
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    from dnshape.plotting import plot_equilibrium, plot_fields
+    from dntokamak.plotting import plot_equilibrium, plot_fields
 
     if fields:
         fig = plot_fields(config.currents, config.grid, config.kind)
@@ -133,7 +133,7 @@ def run_plot(args: argparse.Namespace) -> None:
         return
     import matplotlib.pyplot as plt
 
-    from dnshape.plotting import plot_equilibrium, plot_fields
+    from dntokamak.plotting import plot_equilibrium, plot_fields
 
     if args.fields:
         plot_fields(config.currents, config.grid, config.kind)
@@ -144,7 +144,7 @@ def run_plot(args: argparse.Namespace) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="dnshape", description="Shape double null equilibria for GBS."
+        prog="dntokamak", description="Shape double null equilibria for GBS."
     )
     parser.add_argument("-v", "--verbose", action="store_true", help="debug output")
     sub = parser.add_subparsers(dest="command", required=True)

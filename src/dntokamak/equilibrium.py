@@ -8,9 +8,9 @@ from typing import Callable
 import contourpy
 import numpy as np
 
-from dnshape import flux
-from dnshape.currents import Currents
-from dnshape.grid import Grid
+from dntokamak import flux
+from dntokamak.currents import Currents
+from dntokamak.grid import Grid
 
 XPointRule = Callable[[tuple, Grid], tuple]
 

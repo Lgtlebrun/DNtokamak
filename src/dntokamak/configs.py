@@ -6,9 +6,9 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from dnshape.currents import Currents
-from dnshape.equilibrium import XPOINT_RULES
-from dnshape.grid import Grid
+from dntokamak.currents import Currents
+from dntokamak.equilibrium import XPOINT_RULES
+from dntokamak.grid import Grid
 
 
 @dataclass(frozen=True)

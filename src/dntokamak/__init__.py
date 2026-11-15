@@ -1,10 +1,10 @@
 """Shape double null tokamak equilibria from line currents and export them to GBS."""
 
-from dnshape.configs import Config, load_config, save_config
-from dnshape.currents import Currents, ring
-from dnshape.equilibrium import Equilibrium
-from dnshape.grid import Grid
-from dnshape.shape import Shape, measure
+from dntokamak.configs import Config, load_config, save_config
+from dntokamak.currents import Currents, ring
+from dntokamak.equilibrium import Equilibrium
+from dntokamak.grid import Grid
+from dntokamak.shape import Shape, measure
 
 __version__ = "0.1.0"
 
