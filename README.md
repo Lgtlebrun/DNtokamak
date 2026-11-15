@@ -164,9 +164,10 @@ The tests cover the mesh, the current geometry, the flux symmetry, the shape of 
 
 ## Citation
 
-If you use this code, please cite the paper it was written for.
-
 Lim K, Ricci P, Lebrun L. Effect of negative triangularity on scrape-off layer plasma turbulence in double-null L-mode plasmas. Journal of Plasma Physics. 2026;92(1):E2. doi:10.1017/S0022377825101049 
+```
+@article{Lim_Ricci_Lebrun_2026, title={Effect of negative triangularity on scrape-off layer plasma turbulence in double-null L-mode plasmas}, volume={92}, DOI={10.1017/S0022377825101049}, number={1}, journal={Journal of Plasma Physics}, author={Lim, Kyungtak and Ricci, Paolo and Lebrun, Leonard}, year={2026}, pages={E2}}
+```
 
 ## Acknowledgements
 
